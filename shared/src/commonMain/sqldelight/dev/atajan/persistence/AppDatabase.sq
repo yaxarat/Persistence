@@ -1,0 +1,18 @@
+CREATE TABLE PersonEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT NOT NULL,
+    ssn INTEGER NOT NULL
+);
+
+insertPerson:
+INSERT OR REPLACE INTO PersonEntity (name, email, phone, ssn)
+VALUES (?, ?, ?, ?);
+
+removeAllPerson:
+DELETE FROM PersonEntity;
+
+selectAll:
+SELECT *
+FROM PersonEntity;
